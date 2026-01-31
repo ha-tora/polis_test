@@ -9,7 +9,8 @@ services:
       dockerfile: ./docker/php/Dockerfile
     container_name: polis_test_php
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
     networks:
       - polis_test_network
 
@@ -35,6 +36,7 @@ services:
       MYSQL_USER: ${DB_USERNAME}
       MYSQL_PASSWORD: ${DB_PASSWORD}
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_TCP_PORT: ${DB_PORT}
     ports:
       - "${DB_PORT}:${DB_PORT}"
     networks:
