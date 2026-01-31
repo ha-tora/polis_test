@@ -2,6 +2,7 @@
 
 namespace App\Article\Http\API\Resources;
 
+use App\Article\Http\API\Resources\Comment\CommentCollection;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 use Str;
@@ -14,6 +15,7 @@ class ArticleCollection extends ResourceCollection
             'id'            => $this->id,
             'title'         => $this->title,
             'short_content' => $this->getShortContent($this->content),
+            'comments'      => new CommentCollection($this->comments),
             'created_at'    => $this->created_at
         ];
     }
