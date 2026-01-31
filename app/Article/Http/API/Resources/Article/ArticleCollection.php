@@ -11,13 +11,15 @@ class ArticleCollection extends ResourceCollection
 {
     public function toArray(Request $request): array
     {
-        return [
-            'id'            => $this->id,
-            'title'         => $this->title,
-            'short_content' => $this->getShortContent($this->content),
-            'comments'      => new CommentCollection($this->comments),
-            'created_at'    => $this->created_at
-        ];
+        return $this->collection->transform(function ($article) {
+            return [
+                'id'            => $article->id,
+                'title'         => $article->title,
+                'short_content' => $this->getShortContent($article->content),
+                'comments'      => new CommentCollection($article->comments),
+                'created_at'    => $article->created_at
+            ];
+        })->toArray();
     }
 
     private function getShortContent(string $content, int $min = 200, int $max = 300) 
