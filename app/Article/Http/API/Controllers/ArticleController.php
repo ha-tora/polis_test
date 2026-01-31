@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Article\Http\API\Controllers;
 
 use App\Article\Http\API\Resources\ArticleCollection;
 use App\Article\Http\API\Resources\ArticleResource;

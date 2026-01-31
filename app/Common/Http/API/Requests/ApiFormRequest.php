@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Common\Http\API\Requests;
 
 use App\Common\Exceptions\BadRequestException;
 use Illuminate\Contracts\Validation\Validator;

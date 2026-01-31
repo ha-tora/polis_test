@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Article\Http\API\Resources;
+namespace App\Article\Http\API\Resources\Article;
 
 use App\Article\Http\API\Resources\Comment\CommentCollection;
 use Illuminate\Http\Request;
