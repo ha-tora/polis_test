@@ -9,11 +9,13 @@ class CommentCollection extends ResourceCollection
 {
     public function toArray(Request $request): array
     {
-        return [
-            'id'            => $this->id,
-            'author_name'   => $this->author_name,
-            'content'       => $this->content,
-            'created_at'    => $this->created_at
-        ];
+        return $this->collection->transform(function ($comment) {
+            return [
+                'id'            => $comment->id,
+                'author_name'   => $comment->author_name,
+                'content'       => $comment->content,
+                'created_at'    => $comment->created_at
+            ];
+        })->toArray();
     }
 }

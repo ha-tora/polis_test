@@ -16,7 +16,6 @@ class ArticleCollection extends ResourceCollection
                 'id'            => $article->id,
                 'title'         => $article->title,
                 'short_content' => $this->getShortContent($article->content),
-                'comments'      => new CommentCollection($article->comments),
                 'created_at'    => $article->created_at
             ];
         })->toArray();
