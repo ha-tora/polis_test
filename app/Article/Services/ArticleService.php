@@ -14,7 +14,7 @@ class ArticleService
 
     public function get(Article $article): Article
     {
-        return $article;
+        return $article->load('comments');
     }
 
     public function store(array $attributes): Article
