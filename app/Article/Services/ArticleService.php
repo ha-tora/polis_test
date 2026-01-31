@@ -2,7 +2,7 @@
 
 namespace App\Article\Services;
 
-use App\Models\Article;
+use App\Article\Models\Article;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class ArticleService

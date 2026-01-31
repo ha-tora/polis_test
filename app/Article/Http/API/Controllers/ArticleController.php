@@ -6,7 +6,7 @@ use App\Article\Http\API\Resources\ArticleCollection;
 use App\Article\Http\API\Resources\ArticleResource;
 use App\Article\Services\ArticleService;
 use App\Http\Requests\StoreArticleRequest;
-use App\Models\Article;
+use App\Article\Models\Article;
 
 class ArticleController
 {

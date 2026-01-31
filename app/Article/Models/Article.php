@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Article\Models;
 
 use App\Article\Models\Comment;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
