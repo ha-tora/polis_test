@@ -2,10 +2,10 @@
 
 namespace App\Article\Http\API\Controllers;
 
-use App\Article\Http\API\Resources\ArticleCollection;
-use App\Article\Http\API\Resources\ArticleResource;
+use App\Article\Http\API\Requests\Article\StoreArticleRequest;
+use App\Article\Http\API\Resources\Article\ArticleCollection;
+use App\Article\Http\API\Resources\Article\ArticleResource;
 use App\Article\Services\ArticleService;
-use App\Http\Requests\StoreArticleRequest;
 use App\Article\Models\Article;
 
 class ArticleController
