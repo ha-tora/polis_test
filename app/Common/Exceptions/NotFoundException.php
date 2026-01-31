@@ -3,8 +3,8 @@
 namespace App\Common\Exceptions;
 
 use Exception;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class NotFoundException extends Exception
 {
@@ -12,7 +12,7 @@ class NotFoundException extends Exception
         public mixed $data = []
     ) {}
 
-    public function render(Request $request): Response
+    public function render(Request $request): JsonResponse
     {
         return response()->error(
             $this->data,
