@@ -10,4 +10,9 @@ export default defineConfig({
         }),
         react(),
     ],
+    server: {
+        cors: true,
+        host: 'node',
+        origin: 'http://localhost:5173',
+    },
 });
