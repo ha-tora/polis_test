@@ -3,7 +3,7 @@ import { router } from "@inertiajs/react";
 import { createArticle } from "@/services/articles";
 import { ArticlePayload } from "@/types/article";
 import { MainLayout } from "@/Layouts/MainLayout";
-import { ArticleForm } from "@/Components/Article/ArticleFrom";
+import { ArticleForm } from "@/Components/Article/ArticleForm";
 
 export default function CreateArticlePage() {
   const [loading, setLoading] = useState(false);
