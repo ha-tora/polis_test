@@ -15,7 +15,7 @@ class ArticleController
 
     public function show(Article $article, Request $request)
     {
-        return Inertia::render('Articles/Show', ['article' => $article]);
+        return Inertia::render('Articles/Show', ['article' => $article->load('comments')]);
     }
 
     public function create(Request $request)

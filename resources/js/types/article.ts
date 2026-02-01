@@ -1,7 +1,10 @@
+import { Comment } from "@/types/comment";
+
 export interface Article {
     id: number;
     title: string;
     content: string;
+    comments: Comment[]
     created_at: string;
 }
 

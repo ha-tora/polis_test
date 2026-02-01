@@ -19,7 +19,7 @@ class Comment extends Model
         'content'
     ];
 
-    public function article(): BelongsTo 
+    public function articles(): BelongsTo 
     {
         return $this->belongsTo(Article::class);
     }

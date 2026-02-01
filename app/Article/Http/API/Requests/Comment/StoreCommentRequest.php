@@ -9,7 +9,7 @@ class StoreCommentRequest extends ApiFormRequest
     public function rules(): array
     {
         return [
-            'article_id'    => ['required', 'exists:article,id'],
+            'article_id'    => ['required', 'exists:articles,id'],
             'author_name'   => ['required', 'string'],
             'content'       => ['required', 'string']
         ];
