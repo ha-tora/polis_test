@@ -17,8 +17,3 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql mbstring zip exif pcntl
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/polis_test
-
-CMD [ "php-fpm" ]
-
-EXPOSE 9000
-

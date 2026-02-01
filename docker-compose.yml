@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: ./docker/php/Dockerfile
     container_name: polis_test_php
-    user: "1000:1000"
+    user: "www-data:www-data"
     volumes:
       - .:/var/www/polis_test
     depends_on:
