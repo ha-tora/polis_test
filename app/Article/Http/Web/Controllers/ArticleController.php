@@ -15,11 +15,11 @@ class ArticleController
 
     public function show(Article $article, Request $request)
     {
-        return Inertia::render('Article/Show', ['article' => $article]);
+        return Inertia::render('Articles/Show', ['article' => $article]);
     }
 
     public function create(Request $request)
     {
-        return Inertia::render('Article/Create');
+        return Inertia::render('Articles/Create');
     }
 }
