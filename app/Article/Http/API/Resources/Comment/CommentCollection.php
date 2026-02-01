@@ -16,6 +16,6 @@ class CommentCollection extends ResourceCollection
                 'content'       => $comment->content,
                 'created_at'    => $comment->created_at
             ];
-        })->toArray();
+        })->sortByDesc('created_at')->toArray();
     }
 }

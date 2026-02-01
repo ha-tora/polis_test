@@ -18,7 +18,7 @@ class ArticleCollection extends ResourceCollection
                 'short_content' => $this->getShortContent($article->content),
                 'created_at'    => $article->created_at
             ];
-        })->toArray();
+        })->sortByDesc('created_at')->toArray();
     }
 
     private function getShortContent(string $content, int $min = 200, int $max = 300) 
