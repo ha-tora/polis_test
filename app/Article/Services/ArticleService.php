@@ -3,6 +3,7 @@
 namespace App\Article\Services;
 
 use App\Article\Models\Article;
+use Illuminate\Database\Query\Builder;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class ArticleService
@@ -14,7 +15,9 @@ class ArticleService
 
     public function get(Article $article): Article
     {
-        return $article->load('comments');
+        return $article->load(['comments' => function ($query) {
+            $query->orderBy('created_at', 'desc');
+        }]);
     }
 
     public function store(array $attributes): Article
