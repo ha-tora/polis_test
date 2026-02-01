@@ -37,17 +37,13 @@ export default function ArticlesPage() {
 
   return (
     <MainLayout>
-      <div className="min-h-screen bg-gray-50 p-8">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">Статьи</h1>
+        <h1 className="text-3xl font-bold mb-8">Статьи</h1>
 
-          <div className="grid gap-6">
-            {articles.map((article) => (
-              <ArticleCard key={article.id} article={article} />
-            ))}
-          </div>
+        <div className="grid gap-6">
+          {articles.map((article) => (
+            <ArticleCard key={article.id} article={article} />
+          ))}
         </div>
-      </div>
     </MainLayout>
   );
 }

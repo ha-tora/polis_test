@@ -32,38 +32,36 @@ export default function ArticleShowPage({article}: ArticleShowPageProps) {
 
   return (
     <MainLayout>
-      <div className="max-w-3xl mx-auto space-y-10">
-        <ArticleShow article={article} />
+      <ArticleShow article={article} />
 
-        <section className="space-y-6">
-          <h2 className="text-2xl font-semibold">
-            Комментарии ({comments.length})
-          </h2>
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">
+          Комментарии ({comments.length})
+        </h2>
 
-          <CommentForm
-            onSubmit={handleSubmit}
-            loading={loading}
-            article_id={article.id}
-          />
+        <CommentForm
+          onSubmit={handleSubmit}
+          loading={loading}
+          article_id={article.id}
+        />
 
-          {loading && (
-            <div className="flex justify-center py-20 text-lg">Загрузка…</div>
-          )}
+        {loading && (
+          <div className="flex justify-center py-20 text-lg">Загрузка…</div>
+        )}
 
-          {error && (
-            <div className="flex justify-center py-20 text-red-500">{error}</div>
-          )}
+        {error && (
+          <div className="flex justify-center py-20 text-red-500">{error}</div>
+        )}
 
-          <div className="space-y-4">
-            {comments.map((comment: Comment) => (
-              <CommentCard
-                key={comment.id}
-                comment={comment}
-              />
-            ))}
-          </div>
-        </section>
-      </div>
+        <div className="space-y-4">
+          {comments.map((comment: Comment) => (
+            <CommentCard
+              key={comment.id}
+              comment={comment}
+            />
+          ))}
+        </div>
+      </section>
     </MainLayout>
   );
 }

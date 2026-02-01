@@ -11,7 +11,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
       <Header />
 
       <main className="flex-1 p-8">
-        <div className="max-w-6xl mx-auto">{children}</div>
+        <div className="max-w-3xl mx-auto space-y-10">{children}</div>
       </main>
     </div>
   );
